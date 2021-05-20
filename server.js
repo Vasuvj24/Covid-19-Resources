@@ -6,6 +6,13 @@ const tweetsRouter = require("./routes/getTweets");
 const app = express();
 app.use(express.json());
 
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    optionsSuccessStatus: 200,
+  })
+);
+
 app.use("/tweets", tweetsRouter);
 
 const port = process.env.PORT || 3000;
