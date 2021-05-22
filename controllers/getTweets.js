@@ -11,11 +11,15 @@ const reqUrl =
 
 // prettier-ignore
 const bedQuery =
-"verified Indore (bed OR beds) -\"not verified\" -\"unverified\" -\"needed\" -\"need\" -\"needs\" -\"required\" -\"require\" -\"requires\" -\"requirement\" -\"requirements\"";
+"verified Indore ((oxygen bed) OR (oxygen beds)) -\"not verified\" -\"unverified\" -\"needed\" -\"need\" -\"needs\" -\"required\" -\"require\" -\"requires\" -\"requirement\" -\"requirements\"";
+
+// prettier-ignore
+const icuQuery =
+"verified Indore ((icu bed) OR (icu beds)) -\"not verified\" -\"unverified\" -\"needed\" -\"need\" -\"needs\" -\"required\" -\"require\" -\"requires\" -\"requirement\" -\"requirements\"";
 
 // prettier-ignore
 const foodQuery =
-"verified Indore (food OR foods) -\"not verified\" -\"unverified\" -\"needed\" -\"need\" -\"needs\" -\"required\" -\"require\" -\"requires\" -\"requirement\" -\"requirements\"";
+"verified Indore ((food delivery) OR food) -\"not verified\" -\"unverified\" -\"needed\" -\"need\" -\"needs\" -\"required\" -\"require\" -\"requires\" -\"requirement\" -\"requirements\"";
 
 const getBeds = (req, res) => {
 	const url = reqUrl + bedQuery;
@@ -56,7 +60,46 @@ const getBeds = (req, res) => {
 		});
 };
 
-const getFood = (req, res, next) => {
+const getICU = (req, res) => {
+	const url = reqUrl + icuQuery;
+	axios
+		.get(url, {
+			headers: {
+				Authorization: "Bearer " + process.env.BEARER_TOKEN,
+			},
+		})
+		.then((response) => {
+			let tweets = response.data.data;
+			let newTweets = [];
+			tweets.forEach(async (tweet) => {
+				const tweetId = tweet.id;
+				const tweetInfo = await getTweetInfo(tweetId);
+				const userInfo = await getUsername(tweetInfo.author_id);
+
+				const newTweet = {
+					id: tweetId,
+					createdAt: tweetInfo.created_at,
+					authorId: userInfo.id,
+					authorName: userInfo.name,
+					authorUsername: userInfo.username,
+					text: tweet.text,
+				};
+
+				newTweets.push(newTweet);
+
+				if (newTweets.length == tweets.length) {
+					res.json(newTweets);
+				}
+			});
+
+			// res.json(response.data.data);
+		})
+		.catch((error) => {
+			res.send("Error.");
+		});
+};
+
+const getFood = (req, res) => {
 	const url = reqUrl + foodQuery;
 	axios
 		.get(url, {
@@ -97,3 +140,4 @@ const getFood = (req, res, next) => {
 
 module.exports.getBeds = getBeds;
 module.exports.getFood = getFood;
+module.exports.getICU = getICU;
