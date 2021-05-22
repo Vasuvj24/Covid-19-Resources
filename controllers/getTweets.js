@@ -30,6 +30,7 @@ const getTweets = (req, res) => {
 
 				const newTweet = {
 					id: tweetId,
+					createdAt: tweetInfo.created_at,
 					authorId: userInfo.id,
 					authorName: userInfo.name,
 					authorUsername: userInfo.username,
