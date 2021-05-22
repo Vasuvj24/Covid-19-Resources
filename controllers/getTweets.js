@@ -3,7 +3,7 @@ const axios = require("axios");
 const getTweetInfo = require("./getTweetInfo");
 const getUsername = require("./getUsername");
 
-const maxResults = 10;
+const maxResults = 100;
 const reqUrl =
 	"https://api.twitter.com/2/tweets/search/recent?max_results=" +
 	maxResults +
