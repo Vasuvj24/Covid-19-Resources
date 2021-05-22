@@ -44,7 +44,7 @@ const getBeds = (req, res) => {
 
 				newTweets.push(newTweet);
 
-				if (newTweets.length < tweets.length - 5) {
+				if (newTweets.length >= tweets.length - 5) {
 					res.json(newTweets);
 				}
 			});
