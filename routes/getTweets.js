@@ -1,7 +1,8 @@
 const router = require("express").Router();
 
-const getTweets = require("./../controllers/getTweets");
+const { getBeds, getFood } = require("./../controllers/getTweets");
 
-router.get("/", getTweets);
+router.get("/beds", getBeds);
+router.get("/food", getFood);
 
 module.exports = router;
