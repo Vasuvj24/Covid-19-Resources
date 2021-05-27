@@ -18,6 +18,7 @@ id("menu1").addEventListener("click", function () {
 id("foodbtn1").addEventListener("click", function () {
   console.log("foodbtn1");
   console.log(i);
+  i++;
   if (i % 2 !== 0) {
     id("food1").style.display = "block";
     console.log(i + "display is block");
@@ -29,7 +30,7 @@ id("foodbtn1").addEventListener("click", function () {
   }
 });
 id("bedsbtn1").addEventListener("click", function () {
-  // i++;
+  i++;
   if (i % 2 != 0) {
     console.log(i);
     id("beds1").style.display = "block";
@@ -39,7 +40,7 @@ id("bedsbtn1").addEventListener("click", function () {
   }
 });
 id("injectionbtn1").addEventListener("click", function () {
-  // i++;
+  i++;
   if (i % 2 != 0) {
     console.log(i);
     id("injection1").style.display = "block";
@@ -73,7 +74,7 @@ if (query.matches) {
   });
   console.log(foodbtn1);
   id("foodbtn1").addEventListener("click", function () {
-    i++;
+    // i++;
     if (i % 2 != 0) {
       console.log(i);
       id("food1").style.display = "block";
@@ -84,7 +85,7 @@ if (query.matches) {
     }
   });
   id("bedsbtn1").addEventListener("click", function () {
-    i++;
+    // i++;
     if (i % 2 != 0) {
       console.log(i);
       id("beds1").style.display = "block";
@@ -94,7 +95,7 @@ if (query.matches) {
     }
   });
   id("injectionbtn1").addEventListener("click", function () {
-    i++;
+    // i++;
     if (i % 2 != 0) {
       console.log(i);
       id("injection1").style.display = "block";
