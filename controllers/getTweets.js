@@ -76,7 +76,7 @@ const getBeds = (req, res) => {
 			// res.json(response.data.data);
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 
@@ -115,7 +115,7 @@ const getICU = (req, res) => {
 			// res.json(response.data.data);
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 
@@ -154,7 +154,7 @@ const getFood = (req, res) => {
 			// res.json(response.data.data);
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 
@@ -191,7 +191,7 @@ const getRation = (req, res) => {
 			});
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 
@@ -230,7 +230,7 @@ const getRemdesivir = (req, res) => {
 			// res.json(response.data.data);
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 
@@ -269,7 +269,7 @@ const getTocilizumab = (req, res) => {
 			// res.json(response.data.data);
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 
@@ -308,7 +308,7 @@ const getOxygen = (req, res) => {
 			// res.json(response.data.data);
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 
@@ -347,7 +347,7 @@ const getNews = (req, res) => {
 			// res.json(response.data.data);
 		})
 		.catch((error) => {
-			res.send("Error.");
+			res.json({ error: "Error." });
 		});
 };
 

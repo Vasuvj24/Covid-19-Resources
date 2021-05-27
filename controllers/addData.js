@@ -3,6 +3,8 @@ const Detail = require("./../models/Detail");
 const addData = async (req, res) => {
 	const data = req.body;
 
+    console.log(data);
+
 	try {
 		const savedData = await Detail.create(data);
 		res
