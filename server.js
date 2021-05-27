@@ -16,6 +16,10 @@ app.use(
 	})
 );
 
+app.get("/", (req, res) => {
+	res.send("Hello, world.");
+});
+
 app.use("/tweets", tweetsRouter);
 app.use("/data", dataRouter);
 dbConnect();

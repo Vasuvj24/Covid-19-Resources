@@ -168,7 +168,6 @@ const getRation = (req, res) => {
 		})
 		.then((response) => {
 			let tweets = response.data.data;
-			console.log(response);
 			let newTweets = [];
 			tweets.forEach(async (tweet) => {
 				const tweetId = tweet.id;
@@ -190,8 +189,6 @@ const getRation = (req, res) => {
 					res.json(newTweets);
 				}
 			});
-
-			// res.json(response.data.data);
 		})
 		.catch((error) => {
 			res.send("Error.");
