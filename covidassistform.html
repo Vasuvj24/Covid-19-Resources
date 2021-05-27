@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add data</title>
+    <link rel="stylesheet" href="covidassistform.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon1.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body id="main">
+    <div id="bodysubclass" class="parent">
+        <button id="menu1" class="menu">
+            <i id="3lines" class="fas fa-bars fa-3x" style="color: white; border-radius: 70px; margin: 1vw"></i>
+        </button>
+        <div class="header">
+            <img id="favicon1" src="favicon1.png" width="80vh" height="80vh" alt="" />
+            Covid-19 Resources
+        </div>
+    </div>
+    <!-- fa-3x is 3x zoom using font awesome -->
+    <nav id="sidebar1" class="sidebar">
+        <div id="closingsidebar" class="text"><a href="#">Menu</a></div>
+        <ul>
+            <!-- makes a bulleted list -->
+            <!-- li converts them to a list -->
+            <li>
+                <a href="covidassist.html"><i class="fas fa-home" style="margin-right: 8px"></i> Home</a>
+            </li>
+            <li>
+                <a href="#" id="foodbtn1" class="foodbtn"><i class="fas fa-bread-slice" style="margin-right: 8px"></i>
+                    Food
+                    <span><i class="fas fa-chevron-circle-down first"></i></span></a>
+            </li>
+            <!-- added this -->
+            <ul id="food1" class="food">
+                <li>
+                    <a href="covidassistfooddelivery.html"><i class="fas fa-utensils" style="margin-right: 8px"></i>
+                        Food
+                        delivery</a>
+                </li>
+                <li>
+                    <a href="covidassistration.html"><i class="fas fa-utensils" style="margin-right: 8px"></i>
+                        Ration</a>
+                </li>
+            </ul>
+            <li>
+                <a href="#" id="bedsbtn1" class="bedsbtn"><i class="fas fa-bed" style="margin-right: 8px"></i> Beds
+                    <span><i class="fas fa-chevron-circle-down second"></i></span></a>
+            </li>
+            <ul id="beds1" class="beds">
+                <li>
+                    <a href="covidassistoxygenbeds.html"><i class="fas fa-procedures" style="margin-right: 8px"></i>
+                        Oxygen Beds</a>
+                </li>
+                <li>
+                    <a href="covidassisticu.html"><i class="fas fa-hospital-alt" style="margin-right: 8px"></i>
+                        ICU</a>
+                </li>
+            </ul>
+            <li>
+                <a href="#" id="injectionbtn1" class="injectionbtn"><i class="fas fa-syringe"
+                        style="margin-right: 8px"></i> Injection
+                    Dose <span><i class="fas fa-chevron-circle-down third"></i></span></a>
+            </li>
+            <ul id="injection1" class="injection">
+                <li>
+                    <a href="covidassisttocilizumab.html"><i class="fas fa-pills" style="margin-right: 8px"></i>
+                        Tocilizumab</a>
+                </li>
+                <li>
+                    <a href="covidassistremdesivir.html"><i class="fas fa-lungs-virus" style="margin-right: 8px"></i>
+                        Remdesivir</a>
+                </li>
+            </ul>
+            <li>
+                <a href="covidassistoxygencylinders.html"><i class="fas fa-wind" style="margin-right: 8px"></i> Oxygen
+                    Cylinders</a>
+            </li>
+            <li>
+                <a href="covidassistnews.html"><i class="fas fa-newspaper" style="margin-right: 8px"></i> News</a>
+            </li>
+            <li>
+                <a href="covidassistform.html"><i class="fas fa-user-plus" style="margin-right: 8px"></i> Add
+                    data</a>
+            </li>
+            <li>
+                <a href="covidassistform.html"><i class="fas fa-user-circle" style="margin-right: 8px"></i>
+                    Volunteer</a>
+            </li>
+        </ul>
+    </nav>
+    <form method="POST" enctype="multipart/form-data" id="volunteers-data" onsubmit="submitForm(event)">
+        <div class="leadsadditionform">Data Addition form</div>
+        <input type="text" id="nameofvolunteer" name="name" placeholder="Enter your name" />
+        <input type="number" id="ageofvolunteer" name="age" placeholder="Enter your age" />
+        <!-- <input type="tel" id="numberofvolunteer" name="phone" placeholder="Enter your mobile number"> -->
+        <div class="radio">
+            Beds
+            <input type="radio" id="infoabout" name="type" value="beds" />
+            Remdesivir
+            <input type="radio" id="infoabout" name="type" value="remdesivir" />
+            Food
+            <input type="radio" id="infoabout" name="type" value="food" /> Tocilizumab
+            <input type="radio" id="infoabout" name="type" value="injection" />
+            Oxygen Cylinders
+            <input type="radio" id="infoabout" name="type" value="oxygen" />
+        </div>
+        <textarea name="description" id="informationdetails" cols="30" rows="10"
+            placeholder="Enter details you have"></textarea>
+
+        <button id="submitform" type="submit">Submit</button>
+    </form>
+    <div id="overlay"></div>
+    <script src="https://kit.fontawesome.com/5d378c809b.js" crossorigin="anonymous"></script>
+    <script src="covidassist.js"></script>
+    <script src="adddata.js"></script>
+</body>
+
+</html>

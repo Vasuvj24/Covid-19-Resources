@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19Assist Ratlam</title>
+    <link rel="stylesheet" href="covidassist.css" class="rel">
+    <link rel="shortcut icon" type="image/png" href="favicon1.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body id="main">
+    <div id="bodysubclass" class="parent">
+        <button id="menu1" class="menu"><i id="3lines" class="fas fa-bars fa-3x"
+                style="color: black; border-radius: 70px; margin: 1vw;"></i></button>
+        <div class="header">
+            <img id="favicon1" src="favicon1.png" width="80vh" height="80vh" alt="">
+            Covid-19 Resources
+        </div>
+    </div>
+    <!-- fa-3x is 3x zoom using font awesome -->
+    <nav id="sidebar1" class="sidebar">
+        <div id="closingsidebar" class="text"><a href="#">Menu</a></div>
+        <ul>
+            <!-- makes a bulleted list -->
+            <!-- li converts them to a list -->
+            <li><a href="covidassist.html"><i class="fas fa-home" style="margin-right: 8px;"></i> Home</a></li>
+            <li><a href="#" id="foodbtn1" class="foodbtn"><i class="fas fa-bread-slice"
+                        style="margin-right: 8px;"></i>
+                    Food <span><i class="fas fa-chevron-circle-down first"></i></span></a></li>
+            <!-- added this -->
+            <ul id="food1" class="food">
+                <li><a href="covidassistfooddelivery.html"><i class="fas fa-utensils" style="margin-right: 8px;"></i> Food
+                        delivery</a></li>
+                <li><a href="covidassistration.html"><i class="fas fa-utensils" style="margin-right: 8px;"></i> Ration</a>
+                </li>
+            </ul>
+            <li><a href="#" id="bedsbtn1" class="bedsbtn"><i class="fas fa-bed"
+                        style="margin-right: 8px;"></i> Beds
+                    <span><i class="fas fa-chevron-circle-down second"></i></span></a></li>
+            <ul id="beds1" class="beds">
+                <li><a href="covidassistoxygenbeds.html"><i class="fas fa-procedures" style="margin-right: 8px;"></i> Oxygen
+                        Beds</a></li>
+                <li><a href="covidassisticu.html"><i class="fas fa-hospital-alt" style="margin-right: 8px;"></i> ICU</a>
+                </li>
+            </ul>
+            <li><a href="#" id="injectionbtn1" class="injectionbtn"><i class="fas fa-syringe"
+                        style="margin-right: 8px;"></i> Injection Dose
+                    <span><i class="fas fa-chevron-circle-down third"></i></span></a>
+            </li>
+            <ul id="injection1" class="injection">
+                <li><a href="covidassisttocilizumab.html"><i class="fas fa-pills" style="margin-right: 8px;"></i> Tocilizumab</a>
+                </li>
+                <li><a href="covidassistremdesivir.html"><i class="fas fa-lungs-virus" style="margin-right: 8px;"></i>
+                        Remdesivir</a></li>
+            </ul>
+            <li><a href="covidassistoxygencylinders.html"><i class="fas fa-wind" style="margin-right: 8px;"></i> Oxygen Cylinders</a>
+            </li>
+            <li><a href="covidassistnews.html"><i class="fas fa-newspaper" style="margin-right: 8px;"></i> News</a></li>
+            <li><a href="covidassistform.html"><i class="fas fa-user-plus" style="margin-right: 8px;"></i> Add data</a>
+            </li>
+            <li><a href="covidassistform.html"><i class="fas fa-user-circle" style="margin-right: 8px;"></i>
+                    Volunteer</a></li>
+        </ul>
+    </nav>
+    <!-- sidebar closed -->
+    <div id="body1" class="body1">
+        <a class="vaccine" href="https://www.cowin.gov.in/home">
+            <img id="centericons" src="vaccine_PNG68.png" alt="" width="80vw" height="77%">
+            Vaccination
+        </a>
+        <a class="information" href="covidassistform.html">
+            <img id="centericons" src="—Pngtree—cartoon male volunteer in red_4880033.png" alt="" width="100vw">
+            Volunteer
+            <!-- <img src="—Pngtree—paper icon graphic design template_4766736.png" alt="" style="height: 40%; width: 40%;"> -->
+            <!-- <img src="information icon.png" alt="" style="height: 100%; width: 100%; position: fixed;"> -->
+        </a>
+        <a class="doctorinfo" href="covidassistform.html">
+            <img src="https://img.icons8.com/plasticine/100/000000/add-database.png"/>
+            Add Data
+        </a>
+        <a class="news" href="covidassistnews.html">
+            <img id="centericons" src="pnghut_newspaper-article-magazine-features-cliparts.png" alt="" width="100vw"
+                height="75%">
+            News
+        </a>
+        <a class="plasma" href="covidassistremdesivir.html">
+            <img id="centericons" src="vippng.com-blood-line-png-4232501.png" alt="" width="100vw">
+            Remdesivir
+        </a>
+        <!-- navibar closed -->
+        <!-- incresing size of nav bar icon -->
+    </div>
+    <div id="covidcases" class="covidcases">
+        <div class="column1">
+            <div class="totalcases">
+                <div class="textofcovid1">
+                    Total Cases(India)
+                    <div class="cases">
+                        23646879
+                        <div class="added">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <img id="totalcasesimg" src="Lovepik_com-401677715-wearing-masks-for-supermarket-shopping.png" alt="" width="15%" height="35%" style="margin-left: 85%;;"> -->
+                <!-- <img id="recoveredimg"src="Lovepik_com-401677715-wearing-masks-for-supermarket-shopping.png" alt="" style="border-radius: 20px;" height="60%" width="30%"> -->
+            </div>
+            <div class="totaldeceased">
+                <div class="textofcovid2">
+                    Total Deceased(India)
+                    <div class="deceased">
+                        3266
+                        <div class="added">
+
+                        </div>
+                    </div>
+                </div>
+                <img src="" alt="">
+            </div>
+            <!-- <img id="recoveredimg1" src="Lovepik_com-401675861-protecting-patients-against-viruses.png" alt="" style="border-radius: 20px;" height="60%" width="30%"> -->
+        </div>
+        <div class="totalrecovered">
+            <div class="textofcovid3">
+                Total Recovered(India)
+                <div class="recovered">
+                    46877665
+                    <div class="added">
+
+                    </div>
+                </div>
+            </div>
+            <!-- <img id="recoveredimg2" src="Lovepik_com-450015073-red Coronavirus Vector.png" alt="" style="border-radius: 20px;" height="60%" width="70%"> -->
+        </div>
+    </div>
+    <div id="information2parent" class="information2parent">
+        <div id=information2>
+            <img src="https://img.icons8.com/fluent/48/000000/important-property.png" /
+                style="margin-left: 5px;margin-right: 1vw;" width="35vh" height="35vh">
+            Please check our menu section for essentials
+        </div>
+    </div>
+    <div id="information2parent" class="information2parent">
+        <div id=information2>
+            <img src="https://img.icons8.com/fluent/48/000000/important-property.png" /
+                style="margin-left: 5px; margin-right: 1vw;" height="35vh" width="35vh">
+            Currently we are providing services for Ratlam(M.P)
+        </div>
+    </div>
+    <div class="information3parent">
+        <div id=information3>
+            <img src="https://img.icons8.com/fluent/48/000000/important-property.png" /
+                style=" margin-left: 5px; margin-right: 1vw;" height="35vh" width="35vh">
+            The data is from taken from twitter and from our volunteers. It is completely based on the visitor to check,
+            verify and believe the information so provided.
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <!-- <div id="totaldeceased">
+
+    </div> -->
+    <script src="https://kit.fontawesome.com/5d378c809b.js" crossorigin="anonymous"></script>
+    <script src="covidassist.js"></script>
+    <script>
+
+    </script>
+</body>
+<footer id="footer">
+    <div class="footer-content">
+        <div class="dabba1">
+            <div class="headfooter">
+                Covid-19 Resouces <img src="favicon1.png" alt="" width="10%" height="63%" style="margin-left: 1vmin;">
+            </div>
+            <div class="content-dabba1">
+                Initiative to help people regarding covid Resources and essentials
+                <br>
+                These are tough times but we will get through this too,stay home stay safe and please help others!
+            </div>
+        </div>
+        <div class="unknown">
+            <img src="kisspng-physician-health-care-icon-vector-doctor-material-5a918b93625eb4.8696611715194878914029.png" alt="" height="90vh" width="90vw">
+            <br>
+            Doctors are working everyday hard to get condition in control but we can also help them by staying at home do always thank them after treatment
+            <br>
+             Stay Home Stay Safe
+        </div>
+        <!-- <img src="—Pngtree—infograpics how to prevent and_5345321.png" alt="" width="30%" height="100%"> -->
+        <div class="footerbtns">
+            <!-- <img src="—Pngtree—professional doctors and nurses holding_5338008.png" alt="" width="40vw" height="40vh"> -->
+            Contact us at
+            <div class="handles">
+                <a href="https://www.instagram.com/"><i id="footerimgdb2" class="fab fa-instagram fa-2x" style="margin-right: 5px; ;"></i></a>
+                <a href="https://mail.google.com/mail/u/0/"><i id="footerimgdb2" class="fas fa-envelope fa-2x" style="margin-left: 5px; ;"></i></a>
+                </div>
+                <div class="subdabba2">
+                    Made with <img src="https://img.icons8.com/emoji/48/000000/red-heart.png" / height="30vh"
+                        width="30vw" style="margin-left: 0.5vmin;"> in
+                </div>
+                <img src="https://img.icons8.com/color/48/000000/india-circular.png" / height="40vh" width="40vw">
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        Team Covid-19 Resources |All Rights Reserved <img src="https://img.icons8.com/material-rounded/24/ffffff/creative-commons-all-rights-reserved.png"/ height="20vh" width="20vw">
+        <div class="feedback">
+            <i class="fas fa-comment-alt fa" style="margin-right: 5px;"></i> Feedback
+        </div>
+    </div>
+</footer>
+
+</html>

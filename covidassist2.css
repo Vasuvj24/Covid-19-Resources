@@ -1,0 +1,533 @@
+* {
+  /* this applys to every aspect in html file  */
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+  /* color: white; */
+  /* this says padding and border are included */
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  /* background-image: url("backgrnd-img3.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header {
+  flex: 9.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: black;
+  font-size: 55px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.navibar {
+  background-color: #1e1e1e;
+  height: 100%;
+  /* border-radius: 20px; */
+}
+.sidebar{
+  left: -20vw;
+  /* display: none; */
+  background-color: #1e1e1e;
+  top: 0%;
+  /* border-radius: 40px; */
+  position: fixed;
+  bottom: 120px;
+  color: white;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 20vw;
+  height: 100%;
+  /* overflow: auto; */
+  transition: all 0.3s ease-in-out;
+  transition-property: left;
+  /* transform: translateY(20vw); */
+}
+.title{
+  font-family: "Open Sans", sans-serif;
+}
+.sidebar,.text a{
+  color: white;
+  font-size: 4vmin;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  /* stays hat must be distance between lines */
+  line-height: 50px;
+  text-align: left;
+}
+.text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #1e1e1e;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  font-size: 4vmin;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul {
+  /* background-color: #1e1e1e; */
+  height: 100%;
+  width: 100%;
+  /* mtlb ye square shaped m rhegi */
+  list-style: square;
+}
+nav ul li {
+  /* ye nav k ul li p apply hoga  */
+  color: white;
+  line-height: 60px;
+  border-bottom: 5px solid darkslategray;
+  /* border-left :2px solid transparent; */
+  /* width: 100%; */
+}
+nav ul li a {
+  /* ye nav k ul li k a p apply hoga  */
+  /* inki posi bhe apne purane elements k relative hongi  */
+  color: white;
+  position: relative;
+  flex-direction: left;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  display: block;
+  /* removing base lines */
+  text-decoration: none;
+  /* width: 100%; */
+  margin-left: 0px;
+  padding-left: 5px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: darkcyan;
+  /* font-size: 25px; */
+  background-color: #1e1e1e;
+  border-left-color: cyan;
+}
+#menu1 {
+  /* position: relative; */
+  margin: 7px;
+  flex: 0.5;
+  bottom: 60px;
+  background-color: transparent;
+  border: none;
+  height: 60px;
+  width: 20px;
+  /* user-select: none; */
+  transition: all 1 ease-in-out;
+}
+#menu1:hover{
+  transform: scale(1.1);
+}
+.covidicon {
+  margin-right: 5px;
+}
+.body1 {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+nav ul ul li {
+  line-height: 40px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  /* for inside elements */
+  color: white;
+  padding-left: 17%;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul ul {
+  position: static;
+  display: none;
+}
+nav ul li a span {
+  /* purane ki posi unke khud k old posi k relative thi or nayi unko parent manti h to vo khud parent ban jayenge */
+  /* parent can be accordi */
+  position: absolute;
+  right: 30px;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover span {
+  color: darkcyan;
+  transform: rotate(360deg);
+}
+#3lines{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+#3lines:hover {
+  transform: scale(1.1) ;
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+}
+.parent {
+  border-bottom: 3px solid black;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.vaccine {
+  height: 18vh;
+  width: 10vw;
+  /* border: 2px solid black; */
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1e1e1e;
+  background-color: lightsalmon;
+  border-radius: 1vmin;
+  /* border: 2px solid; */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.vaccine:hover, .vaccine:focus , .vaccine:active {
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+
+}
+.information {
+  height: 18vh;
+  width: 10vw;
+  /* border: 2px solid black; */
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1e1e1e;
+  background-color: skyblue;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.information:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
+}
+.doctorinfo{
+  height: 18vh;
+  width: 10vw;
+  /* border: 2px solid black; */
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1e1e1e;
+  background-color: goldenrod;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.doctorinfo:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
+}
+.news{
+  height: 18vh;
+  width: 10vw;
+  /* border: 2px solid black; */
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1e1e1e;
+  background-color: cadetblue;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.news:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
+}
+.plasma{
+  height: 18vh;
+  width: 10vw;
+  /* border: 2px solid black; */
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  text-decoration: none;
+  color: #1e1e1e;
+  background-color: skyblue;
+  /* border: 2px solid black; */
+  border-radius: 1vmin;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.plasma:hover{
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  /* border-bottom: darkcyan; */
+  /* text-decoration: darkcyan; */
+}
+.information2parent{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+}
+#information2{
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 9vh;
+  width: 70vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 3vmin;
+  /* background-color: rgb(250, 250, 250); */
+}
+#information3{
+  font-weight: 700;
+  /* font-family: "Open Sans", sans-serif; */
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 9vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  font-size: 3vmin;
+  /* background-color: rgb(219, 214, 214); */
+}
+.information3parent{
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+}
+.covidcases{  
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  /* border: 2px solid black; */
+}
+.graph{
+  margin: 15px;
+  margin-left: 15vw;
+  height: 200px;
+  width: 400px;
+  border: 2px solid black;
+}
+footer{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 3vh;
+  height: 20vh;
+  width: 100%;
+  border: 2px solid black;
+  background-color: #1e1e1e;
+  font-family: "Open Sans", sans-serif;
+}
+.div1{
+  border: 2px solid black;
+  align-self: center;
+  width: 100%;
+  height: 7vh;
+  background-color: black;
+}
+.textfooter1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  color: white;
+  font-size: 3vmin;
+}
+.column1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 45vw;
+  /* border: 2px solid black; */
+}
+.totalcases{
+  font-size: 5vmin;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 45%;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-image: url("Lovepik_com-401677715-wearing-masks-for-supermarket-shopping.png") ;
+  background-size: contain ;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+.totaldeceased{
+  margin-top: 5vmin;
+  font-size: 5vmin;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 45%;
+  width: 80%;
+  border: 2px black;
+  border-style: inset;
+  border-radius: 20px;
+  background-image: url("Lovepik_com-450015073-red\ Coronavirus\ Vector.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.totalrecovered{
+  font-size: 5vmin;
+  /* font-weight: 00; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width:35vw;
+  border: 2px solid black;
+  border-radius: 20px;
+  /* background-color: darkkhaki; */
+  background-image: url("Lovepik_com-401675861-protecting-patients-against-viruses.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+}
+.textofcovid1{
+  font-family: "Open Sans", sans-serif;
+  margin-top: 1vh;
+  margin-left: 0.5vw;
+  color: black;
+  font-size: 5vmin;
+}
+.textofcovid2{
+  font-family: "Open Sans", sans-serif;
+  margin-top: 1vh;
+  margin-left: 0.5vw;
+  color: black;
+  font-size: 5vmin;
+  font-weight: 700;
+}
+.textofcovid3{
+  margin-left: 7px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2vh;
+  color: black;
+  font-size: 5vmin;
+  font-weight: 900;
+}
+
+.added{
+  /* border: 2px solid black; */
+  width: 30%;
+  height: 7vh;
+}
+.recovered{
+  display: flex;
+  flex-direction: row;
+}
+.cases{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.deceased{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.footerimg1{
+  align-self: flex-end;
+}
+#footerimg2{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  align-self: flex-end;
+  /* border: 2px solid black; */
+  height: 80%;
+  width: 20vw;
+}
+.footertext2{
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 3vmin;
+  font-weight: 700;
+  text-align: center;
+}
+.rights{
+  align-self: flex-end;
+  text-align: start;
+}

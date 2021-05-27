@@ -1,0 +1,606 @@
+* {
+  /* this applys to every aspect in html file  */
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+  /* color: white; */
+  /* this says padding and border are included */
+  box-sizing: border-box;
+  /* color: white; */
+  font-family: "Open Sans", sans-serif;
+}
+body{
+  z-index: -1.5;
+  background-image: url("mika-baumeister-uz_T7h8ds04-unsplash.jpg");
+  background-size: cover;
+  background-position-x: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.header {
+  flex: 9.5;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 55px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  /* border-radius: 10px; */
+  text-decoration: none;
+  /* background-color: rgb(231, 155, 125); */
+  opacity: 1.5;
+}
+.navibar {
+  background-color: #1e1e1e;
+  height: 100%;
+  /* border-radius: 20px; */
+}
+.sidebar{
+  left: -20vw;
+  /* display: none; */
+  background-color: #1e1e1e;
+  top: 0%;
+  /* border-radius: 40px; */
+  position: fixed;
+  bottom: 120px;
+  color: white;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 20vw;
+  height: 100%;
+  /* overflow: auto; */
+  transition: all 0.3s ease-in-out;
+  transition-property: left;
+  /* transform: translateY(20vw); */
+  overflow-y: scroll;
+  z-index: 5;
+}
+.title{
+  font-family: "Open Sans", sans-serif;
+}
+.sidebar,.text a{
+  color: white;
+  font-size: 4vmin;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300px;
+  /* stays hat must be distance between lines */
+  line-height: 50px;
+  text-align: left;
+}
+.text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #1e1e1e;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  font-size: 4vmin;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul {
+  /* background-color: #1e1e1e; */
+  height: 100%;
+  width: 100%;
+  /* mtlb ye square shaped m rhegi */
+  list-style: square;
+}
+nav ul li {
+  /* ye nav k ul li p apply hoga  */
+  color: white;
+  line-height: 60px;
+  border-bottom: 5px solid darkslategray;
+  /* border-left :2px solid transparent; */
+  /* width: 100%; */
+}
+nav ul li a {
+  /* ye nav k ul li k a p apply hoga  */
+  /* inki posi bhe apne purane elements k relative hongi  */
+  color: white;
+  position: relative;
+  flex-direction: left;
+  font-size: 3vmin;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  display: block;
+  /* removing base lines */
+  text-decoration: none;
+  /* width: 100%; */
+  margin-left: 0px;
+  padding-left: 5px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: darkcyan;
+  /* font-size: 25px; */
+  background-color: #1e1e1e;
+  border-left-color: cyan;
+}
+
+#menu1 {
+  /* position: relative; */
+  flex: 0.5;
+  /* bottom: 60px; */
+  background-color: transparent;
+  border: none;
+  height: 60px;
+  width: 20px;
+  /* user-select: none; */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  /* background-color: lightsalmon; */
+}
+
+.covidicon {
+  margin-right: 5px;
+}
+.body1 {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+nav ul ul li {
+  line-height: 40px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  /* for inside elements */
+  color: white;
+  padding-left: 17%;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul ul {
+  /* position: relative; */
+  height: 13vh;
+  transition: all 0.4s ease-in-out;
+  display: none;
+  /* right: 20vw; */
+}
+nav ul ul li{
+  border-bottom: 4px solid darkslategray;
+}
+nav ul li a span {
+  /* purane ki posi unke khud k old posi k relative thi or nayi unko parent manti h to vo khud parent ban jayenge */
+  /* parent can be accordi */
+  position: absolute;
+  right: 30px;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover span {
+  color: darkcyan;
+  transform: rotate(360deg);
+
+}
+#menu1:hover {
+  transform: scale(1.1) ;
+}
+.parent {
+  /* border-bottom: 3px solid black; */
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color:transparent;
+  z-index: 5;
+}
+#closingsidebar a{
+  color: white;
+  text-decoration: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 20vh;
+  left: 26vw;
+  height: 65vh;
+  width: 55%;
+  font-family: "Open Sans", sans-serif;
+  z-index: 8;
+}
+input,
+textarea {
+  font-weight: 700;
+  margin: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+#infoabout {
+  font-weight: 700;
+  display: inline;
+}
+#ageofvolunteer {
+  font-weight: 700;
+  width: 50vw;
+  height: 5vh;
+}
+#nameofvolunteer {
+  font-weight: 700;
+  width: 50vw;
+  height: 5vh;
+}
+#informationdetails {
+  font-weight: 700;
+  width: 50vw;
+  height: 20vh;
+}
+
+#headingofform {
+  margin-top: 15vh;
+  font-weight: 700;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-weight: 700;
+  /* background-color: cornsilk; */
+  font-family: "Open Sans", sans-serif;
+}
+#submitform{
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid cyan;
+  font-weight: 900;
+  border-radius: 10px;
+  width: 10vw;
+  height: 5vh;
+  background-color: cyan;
+  box-shadow: 0 0 15px cyan;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#submitform:active,#submitform:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 20px cyan;
+}
+.radio{
+  color: white;
+  font-weight: 400;
+  font-size: 3vmin;
+}
+.leadsadditionform{
+  display: flex;
+  justify-content: center;
+  font-size: 4vmin;
+  font-weight: 500;
+  color: #FFFFFFFF;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+}
+#nameofvolunteer{
+  background-color: rgb(252, 252, 252);
+}
+#overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 411px){
+  * {
+    /* this applys to every aspect in html file  */
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    /* color: white; */
+    /* this says padding and border are included */
+    box-sizing: border-box;
+    /* color: white; */
+    font-family: "Open Sans", sans-serif;
+  }
+  body{
+    z-index: -1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header {
+    flex: 9.5;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 8vmin;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    /* border-radius: 10px; */
+    text-decoration: none;
+    /* background-color: rgb(231, 155, 125); */
+    opacity: 1.5;
+  }
+  .navibar {
+    background-color: #1e1e1e;
+    height: 100%;
+    /* border-radius: 20px; */
+  }
+  .sidebar{
+    left: -50vw;
+    /* display: none; */
+    background-color: #1e1e1e;
+    top: 0%;
+    /* border-radius: 40px; */
+    position: fixed;
+    bottom: 120px;
+    color: white;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 45vw;
+    height: 100%;
+    /* overflow: auto; */
+    transition: all 0.3s ease-in-out;
+    transition-property: left;
+    /* transform: translateY(20vw); */
+    overflow-y: scroll;
+    z-index: 10;
+  }
+  .title{
+    font-family: "Open Sans", sans-serif;
+  }
+  #favicon1{
+    height: 6vh;
+    width: 9vw;
+  }
+  .sidebar,.text a{
+    color: white;
+    font-size: 4vmin;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300px;
+    /* stays hat must be distance between lines */
+    line-height: 50px;
+    text-align: left;
+  }
+  .text a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #1e1e1e;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 4vmin;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+  }
+  nav ul {
+    /* background-color: #1e1e1e; */
+    height: 100%;
+    width: 100%;
+    /* mtlb ye square shaped m rhegi */
+    list-style: square;
+  }
+  nav ul li {
+    /* ye nav k ul li p apply hoga  */
+    color: white;
+    line-height: 60px;
+    border-bottom: 5px solid darkslategray;
+    /* border-left :2px solid transparent; */
+    /* width: 100%; */
+  }
+  nav ul li a {
+    /* ye nav k ul li k a p apply hoga  */
+    /* inki posi bhe apne purane elements k relative hongi  */
+    color: white;
+    position: relative;
+    flex-direction: left;
+    font-size: 3vmin;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    display: block;
+    /* removing base lines */
+    text-decoration: none;
+    /* width: 100%; */
+    margin-left: 0px;
+    padding-left: 5px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  nav ul li a:hover {
+    /* pointer-events: none; */
+    color: darkcyan;
+    /* font-size: 25px; */
+    background-color: #1e1e1e;
+    border-left-color: cyan;
+  }
+  #menu1 i{
+    margin: 2vmin;
+    font-size: 7.5vmin;
+  }
+  #menu1 {
+    /* position: relative; */
+    flex: 0.5;
+    /* bottom: 60px; */
+    background-color: transparent;
+    border: none;
+    height: 5vh;
+    width: 9vw;
+    margin-top: 1vmin;
+    /* user-select: none; */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    /* background-color: lightsalmon; */
+  }
+  .covidicon {
+    margin-right: 5px;
+  }
+  .body1 {
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  nav ul ul li {
+    line-height: 40px;
+    border-bottom: none;
+  }
+  nav ul ul li a {
+    /* for inside elements */
+    color: white;
+    padding-left: 17%;
+    font-size: 3vmin;
+    font-family: "Open Sans", sans-serif;
+  }
+  nav ul ul {
+    /* position: relative; */
+    height: 13vh;
+    transition: all 0.4s ease-in-out;
+    display: none;
+    /* right: 20vw; */
+  }
+  nav ul ul li{
+    border-bottom: 4px solid darkslategray;
+  }
+  nav ul li a span {
+    /* purane ki posi unke khud k old posi k relative thi or nayi unko parent manti h to vo khud parent ban jayenge */
+    /* parent can be accordi */
+    position: absolute;
+    right: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  nav ul li a:hover span {
+    /* pointer-events: none; */
+    color: darkcyan;
+    transform: rotate(360deg);
+  
+  }
+  #menu1:hover {
+    transform: scale(1.1) ;
+  }
+  .parent {
+    /* border-bottom: 3px solid black; */
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    background-color:transparent;
+    z-index: 5;
+  }
+  #closingsidebar a{
+    color: white;
+    text-decoration: none;
+  }
+  form {
+    position: absolute;
+    top: 14vh;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    height: 65vh;
+    width: 80vw;
+    font-family: "Open Sans", sans-serif;
+    z-index: 8;
+  }
+  input,
+  textarea {
+    font-weight: 700;
+    margin: 10px;
+    font-family: "Open Sans", sans-serif;
+  }
+  #infoabout {
+    /* font-size: 2vmin; */
+    font-weight: 700;
+    display: inline;
+  }
+  #ageofvolunteer {
+    border-radius: 2vmin;
+    font-weight: 700;
+    width: 90%;
+    height: 5vh;
+  }
+  #nameofvolunteer {
+    font-weight: 700;
+    width: 90%;
+    height: 5vh;
+  }
+  #informationdetails {
+    border-radius: 2vmin;
+    font-weight: 700;
+    width: 90%;
+    height: 20vh;
+  }
+  
+  #headingofform {
+    margin-top: 15vh;
+    font-weight: 700;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 700;
+    /* background-color: cornsilk; */
+    font-family: "Open Sans", sans-serif;
+  }
+  #submitform{
+    /* display: none; */
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    border: 2px solid cyan;
+    font-weight: 900;
+    border-radius: 10px;
+    width: 17vw;
+    height: 5vh;
+    background-color: cyan;
+    box-shadow: 0 0 15px cyan;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  #submitform:active,#submitform:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px cyan;
+  }
+  .radio{
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 4vmin;
+  }
+  .leadsadditionform{
+    display: flex;
+    justify-content: center;
+    font-size: 6vmin;
+    font-weight: 500;
+    color: #FFFFFFFF;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+  }
+  #nameofvolunteer{
+    border-radius: 2vmin;
+    background-color: rgb(252, 252, 252);
+  }
+  #overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("mika-baumeister-uz_T7h8ds04-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
