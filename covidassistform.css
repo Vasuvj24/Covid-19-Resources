@@ -293,7 +293,7 @@ textarea {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 411px){
+@media (max-width: 600px){
   * {
     /* this applys to every aspect in html file  */
     margin: 0px;
