@@ -408,7 +408,7 @@ nav ul li a:hover span {
   left: -25%;
   margin: auto;
 }
-@media (max-width: 411px) {
+@media (max-width: 600px) {
   * {
     /* this applys to every aspect in html file  */
     margin: 0px;
