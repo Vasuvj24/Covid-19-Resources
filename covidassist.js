@@ -54,7 +54,7 @@ id("closingsidebar").addEventListener("click", function () {
   id("overlay").style.backgroundColor = "rgba(0,0,0,0)";
 });
 
-let query = window.matchMedia('(max-width: 411px)');
+let query = window.matchMedia('(max-width: 600px)');
 if (query.matches) {
   var i = 0;
   function qsa(selector) {
