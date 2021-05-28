@@ -71,7 +71,7 @@ id("personaldata1").addEventListener("click", () => {
   id("personaldata1").style.borderBottom = "5px solid darkcyan";
   id("tweets1").style.borderBottom = "none";
 });
-let query = window.matchMedia('(max-width: 411px)'); // & '(max-height: 823px)'
+let query = window.matchMedia('(max-width: 600px)'); // & '(max-height: 823px)'
 if (query.matches) {
   var i = 0;
   function qsa(selector) {
